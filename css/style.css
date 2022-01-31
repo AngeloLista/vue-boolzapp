@@ -12,8 +12,8 @@
     height: 95vh;
 }
 
-.red {
-    background-color: red;
+.h-95vh {
+    background-color: white;
     height: 95vh;
 }
 
@@ -62,4 +62,17 @@
 .avatar-img {
     border-radius: 50%;
     height: 50px;
+}
+
+#search-chat {
+    width: 100%;
+    margin: 5px;
+}
+
+.contact {
+    border-top: 1px solid lightgray;
+}
+
+.active-chat {
+    background-color: #e9ebeb;
 }
