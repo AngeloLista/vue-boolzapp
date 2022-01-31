@@ -21,3 +21,20 @@
     background-color: yellow;
     height: 95vh;
 }
+
+/* Utilities */
+.h-100 {
+    height: 100px;
+}
+
+.purple {
+    background-color: purple;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.green {
+    background-color: green;
+}
