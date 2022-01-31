@@ -23,18 +23,31 @@
 }
 
 /* Utilities */
-.h-100 {
-    height: 100px;
-}
-
 .purple {
     background-color: purple;
 }
 
-.blue {
-    background-color: blue;
+.light-gray {
+    background-color: #eaeaea;
+}
+
+.light-blue {
+    background-color: #8edafc;
 }
 
 .green {
     background-color: green;
+}
+
+.icon-gray {
+    color: #b1b1b1;
+}
+
+.avatar-img {
+    border-radius: 50%;
+    height: 50px;
+}
+
+.height-70 {
+    height: 70px;
 }
