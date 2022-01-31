@@ -1,0 +1,23 @@
+.gradient {
+    height: 100vh;
+    background: linear-gradient(to bottom, 
+        #009688   15%, 
+        #d8dbd6   15%, 
+        #d8dbd6   100%
+    );
+  }
+
+#content {
+    background-color: white;
+    height: 95vh;
+}
+
+.red {
+    background-color: red;
+    height: 95vh;
+}
+
+.yellow {
+    background-color: yellow;
+    height: 95vh;
+}
