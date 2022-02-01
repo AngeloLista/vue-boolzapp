@@ -6,6 +6,7 @@ const root = new Vue ({
     el: '#root',
     data: {
       currentIndex: 0,
+      newMessage: '',
       user: {
           name: 'Franca Rossi',
           avatar: '_io'
@@ -29,7 +30,7 @@ const root = new Vue ({
             date: '10/01/2020 16:15:22',
             text: 'Tutto fatto!',
             status: 'received'
-          }
+          },
           ],
         },
         {
@@ -94,8 +95,20 @@ const root = new Vue ({
     },
     methods: {
       chatSelector(index) {
-        console.log(index);
         this.currentIndex = index;
+        console.log(this.contacts[this.currentIndex].messages);
       },
+      sendMessage() {
+        if(this.newMessage) {
+          this.contacts[this.currentIndex].messages.push(
+            {
+              date: Date(),
+              text: this.newMessage,
+              status: 'sent'
+            }
+          );
+        }
+        this.newMessage = '';
+      }
     },
 })
