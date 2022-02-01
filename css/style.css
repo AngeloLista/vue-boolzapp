@@ -11,9 +11,36 @@ body {
     height: 90%;
 }
 
-#content {
-    background-color: white;
-    height: 95vh;
+/* Utilities */
+
+.bg-light-gray {
+    background-color: #ebe9eb;
+}
+
+.gray {
+    color: #b1b1b1;
+}
+
+.gray-text {
+    color: #567fa9;
+}
+
+
+/* Sidebar */
+/* User Info */
+.media {
+    height: 70px;
+}
+
+.avatar-img {
+    border-radius: 50%;
+    height: 50px;
+}
+
+/* Notifications Alter */
+#notifications-alert {
+    height: 70px;
+    background-color: lightblue;
 }
 
 #notifications-icon{
@@ -23,68 +50,58 @@ body {
     color: #8edafc;
 }
 
-.avatar-img {
-    border-radius: 50%;
-    height: 50px;
+.options {
+    width: 105px;
 }
 
-#search-chat {
+/* Search */
+#search {
+    height: 50px;
+    background-color: #fbfafb;
+    position: relative;
+}
+
+#search .fa-search {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 25px;
+}
+
+#search-input {
     width: 100%;
     margin: 5px;
     border: 0;
     border-radius: 10px;
     height: 35px;
-    padding-left: 5px;
+    padding-left: 30px;
 }
 
-.contact {
-    border-top: 1px solid lightgray;
+/* Contact List */
+
+
+
+/* Chat */
+#chat {
+    background-image: url('../img/mine.jpg');
 }
 
-.active-chat {
-    background-color: #e9ebeb;
+/* Message Input Text*/
+#footer {
+    background-color: #f5eeeb;
+}
+#message-input {
+    width: 100%;
+    border: 0;
+    padding: 10px;
+    border-radius: 15px;
 }
 
 
-
-/* Utilities */
-.w-15 {
-    width: 15%;
+.h-calc-262 {
+    height: calc(100vh - 262px);
 }
 
-.h-95vh {
-    background-color: white;
-    height: 95vh;
-}
-
-.yellow {
-    background-color: yellow;
-    height: 95vh;
-}
-.purple {
-    background-color: purple;
-}
-
-.light-gray {
-    background-color: #eaeaea;
-}
-
-.light-blue {
-    background-color: #8edafc;
-}
-
-.green {
-    background-color: green;
-}
-
-.icon-gray {
-    color: #b1b1b1;
-}
-
-.gray-text {
-    color: #567fa9;
-}
-
-.height-70 {
-    height: 70px;
+.h-calc-212 {
+    height: calc(100vh - 212px);
 }
