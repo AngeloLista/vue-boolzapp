@@ -78,6 +78,9 @@ body {
 }
 
 /* Contact List */
+.contact:hover {
+    background-color: #bdbdbd;
+}
 
 
 
