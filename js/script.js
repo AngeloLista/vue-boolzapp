@@ -95,10 +95,9 @@ const root = new Vue ({
         },
       ],
     },
-    methods: {  
+    methods: {
       chatSelector(index) {
         this.currentIndex = index;
-        console.log(this.contacts[this.currentIndex].messages);
       },
       sendMessage() {
         if(this.newMessage) {
@@ -120,6 +119,13 @@ const root = new Vue ({
             }
           );
         }, 1000);
+      },
+      isActive(index) {
+        if (this.currentIndex === index) {
+          return true;
+        } else {
+          return false;
+        }
       }
     },
 })

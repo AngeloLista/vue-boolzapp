@@ -65,7 +65,7 @@
                     <div id="contacts-list" class="row flex-grow-1 overflow-auto">
                         <div class="col p-0 h-calc-262">
                             <!-- Contact -->
-                            <div v-for="(contact, index) in contacts" role="button" class="col d-flex align-items-center height-70 p-3 contact" @click="chatSelector(index)">
+                            <div v-for="(contact, index) in contacts" role="button" class="col d-flex align-items-center p-3 contact" :class="{ active: isActive(index) }" @click="chatSelector(index)">
                                 <img :src="`img/avatar${contact.avatar}.jpg`" class="img-fluid avatar-img" :alt="contact.name">
                                 <p class="d-inline-block my-0 mx-1">{{ contact.name }}</p>
                             </div>
