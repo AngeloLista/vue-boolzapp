@@ -7,6 +7,10 @@ body {
     );
 }
 
+#root .container {
+    height: 90%;
+}
+
 #content {
     background-color: white;
     height: 95vh;
