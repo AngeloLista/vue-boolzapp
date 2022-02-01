@@ -78,8 +78,16 @@ body {
 }
 
 /* Contact List */
+.active-chat {
+    background-color: #ecebec;
+}
+
+.contact {
+    border-top: 0.5px solid #f2f0f2;
+}
+
 .contact:hover {
-    background-color: #bdbdbd;
+    background-color: #dddddd;
 }
 
 
@@ -88,6 +96,39 @@ body {
 #chat {
     background-image: url('../img/mine.jpg');
 }
+
+/* Messages */
+.message-container {
+    display: flex;
+}
+.message-container.sent {
+    justify-content: flex-end;
+}
+
+.message-container.received {
+    justify-content: flex-start;
+}
+
+.message-container.sent .message {
+    background-color: #d7f9bc;
+}
+
+.message-container.received .message {
+    background-color: #fffeff;
+}
+
+.message-container .message p {
+    margin-bottom: 0;
+}
+
+.message-container .message time {
+    display: block;
+    text-align: right;
+    font-size: 11px;
+    color: #c9c1ba;
+}
+
+
 
 /* Message Input Text*/
 #footer {
