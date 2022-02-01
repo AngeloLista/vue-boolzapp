@@ -93,7 +93,7 @@ const root = new Vue ({
         },
       ],
     },
-    methods: {
+    methods: {  
       chatSelector(index) {
         this.currentIndex = index;
         console.log(this.contacts[this.currentIndex].messages);
@@ -109,6 +109,15 @@ const root = new Vue ({
           );
         }
         this.newMessage = '';
+        setTimeout(() => {
+          this.contacts[this.currentIndex].messages.push(
+            {
+              date: Date(),
+              text: 'ok',
+              status: 'received'
+            }
+          );
+        }, 1000);
       }
     },
 })
