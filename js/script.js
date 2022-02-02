@@ -39,7 +39,7 @@ const root = new Vue ({
         {
           name: 'Angelo',
           avatar: '_2',
-          visible: true,
+          visible: false,
           messages: [{
             date: '20/03/2020 16:30:00',
             text: 'Ciao come stai?',
@@ -103,7 +103,7 @@ const root = new Vue ({
 
       sendMessage() {
         if(!this.newMessageText) return;
-        
+
         // Aggiungo messaggio inviato all'array 'messages'
         this.addMessage(this.newMessageText, 'sent')
         // Aggiungo risposta automatica
@@ -131,6 +131,11 @@ const root = new Vue ({
         } else {
           return false;
         }
-      }
+      },
+      filterItems() {
+        return this.contacts[this.currentIndex].name.filter(function(el) {
+          return el.toLowerCase().indexOf(this.search.toLowerCase()) !== -1
+        })
+      },
     },
 })
