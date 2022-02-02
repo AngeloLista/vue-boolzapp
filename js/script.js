@@ -8,7 +8,7 @@ const root = new Vue ({
     el: '#root',
     data: {
       currentIndex: 0,
-      newMessage: '',
+      newMessageText: '',
       search: '',
       user: {
           name: 'Franca Rossi',
@@ -100,28 +100,31 @@ const root = new Vue ({
       chatSelector(index) {
         this.currentIndex = index;
       },
+
       sendMessage() {
-        if(this.newMessage) {
-          this.contacts[this.currentIndex].messages.push(
-            {
-              date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
-              text: this.newMessage,
-              status: 'sent'
-            }
-          );
-          setTimeout(() => {
-            this.contacts[this.currentIndex].messages.push(
-              {
-                date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
-                text: 'Ok',
-                status: 'received'
-              }
-            );
-          }, 1000);
-        }
-        this.newMessage = '';
+        if(!this.newMessageText) return;
+        
+        // Aggiungo messaggio inviato all'array 'messages'
+        this.addMessage(this.newMessageText, 'sent')
+        // Aggiungo risposta automatica
+        setTimeout(() => {
+          this.addMessage('Ok', 'received')
+        }, 1000);
+        
+        this.newMessageText = '';
         
       },
+
+      addMessage(text, status) {
+        this.contacts[this.currentIndex].messages.push(
+          {
+            date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
+            text,
+            status,
+          }
+        );  
+      },
+
       isActive(index) {
         if (this.currentIndex === index) {
           return true;
