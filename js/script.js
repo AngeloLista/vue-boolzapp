@@ -9,6 +9,7 @@ const root = new Vue ({
     data: {
       currentIndex: 0,
       newMessage: '',
+      search: '',
       user: {
           name: 'Franca Rossi',
           avatar: '_io'
@@ -108,17 +109,18 @@ const root = new Vue ({
               status: 'sent'
             }
           );
+          setTimeout(() => {
+            this.contacts[this.currentIndex].messages.push(
+              {
+                date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
+                text: 'Ok',
+                status: 'received'
+              }
+            );
+          }, 1000);
         }
         this.newMessage = '';
-        setTimeout(() => {
-          this.contacts[this.currentIndex].messages.push(
-            {
-              date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
-              text: 'ok',
-              status: 'received'
-            }
-          );
-        }, 1000);
+        
       },
       isActive(index) {
         if (this.currentIndex === index) {

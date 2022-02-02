@@ -91,7 +91,7 @@ body {
 }
 
 .contact:hover {
-    background-color: #dddddd;
+    background-color: #dfdfdf;
 }
 
 
@@ -138,6 +138,7 @@ body {
 #footer {
     background-color: #f5eeeb;
 }
+
 #message-input {
     width: 100%;
     border: 0;
