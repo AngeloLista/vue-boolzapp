@@ -144,6 +144,12 @@ const root = new Vue ({
         let messagesLength = this.contacts[this.currentIndex].messages.length -1;
         let lastSeenDate = this.contacts[this.currentIndex].messages[messagesLength].date;
         return lastSeenDate;
+      },
+
+      lastText(index) {
+        let messagesLength = this.contacts[index].messages.length -1;
+        let lastText = this.contacts[index].messages[messagesLength].text;
+        return lastText;
       }
     },
   })

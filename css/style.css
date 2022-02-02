@@ -94,6 +94,14 @@ body {
     background-color: #dfdfdf;
 }
 
+#contact-name {
+    margin-left: 10px;
+}
+
+#last-message {
+    margin-left: 10px;
+    font-size: 13px;
+}
 
 
 /* Chat */
