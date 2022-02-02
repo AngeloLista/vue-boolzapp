@@ -131,7 +131,7 @@ const root = new Vue ({
           return false;
         }
       },
-      
+
       filterContacts(contact) {
         if (this.searchString) {
           return true;
@@ -139,5 +139,11 @@ const root = new Vue ({
           return contact.name.toLowerCase().includes(this.search.toLowerCase());
         }
       },
+
+      lastSeen() {
+        let messagesLength = this.contacts[this.currentIndex].messages.length -1;
+        let lastSeenDate = this.contacts[this.currentIndex].messages[messagesLength].date;
+        return lastSeenDate;
+      }
     },
   })
