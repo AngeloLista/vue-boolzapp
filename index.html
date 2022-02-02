@@ -83,10 +83,12 @@
                     <div id="Contact-info" class="row media">
                         <div class="col bg-light-gray d-flex justify-content-between align-items-center">
                             <div class="col bg-light-gray d-flex justify-content-between align-items-center">
-                                <div>
+                                <div class="d-flex align-items-center">
                                     <img :src="`img/avatar${contacts[currentIndex].avatar}.jpg`" class="img-fluid avatar-img" alt="Contact Avatar">
-                                    <p class="d-inline-block my-0 mx-1 h6">{{ contacts[currentIndex].name }}</p>
-                                    <p class="d-inline-block my-0 mx-1">ultimo accesso: {{ lastSeen() }}</p>
+                                    <div class="d-flex flex-column">
+                                        <p class="d-inline-block my-0 mx-1 h6">{{ contacts[currentIndex].name }}</p>
+                                        <p id="last-seen" class="d-inline-block my-0 mx-1">ultimo accesso: {{ lastSeen() }}</p>
+                                    </div>
 
                                 </div>
                                 <!-- Menu Options -->

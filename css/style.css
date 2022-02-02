@@ -97,6 +97,12 @@ body {
 
 
 /* Chat */
+/* Contact Info */
+
+#last-seen {
+    font-size: 13px;
+}
+
 #chat {
     background-image: url('../img/mine.jpg');
 }
