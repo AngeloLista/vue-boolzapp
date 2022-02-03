@@ -125,11 +125,7 @@ const root = new Vue ({
       },
 
       isActive(index) {
-        if (this.currentIndex === index) {
-          return true;
-        } else {
-          return false;
-        }
+        return (this.currentIndex === index);
       },
 
       filterContacts(contact) {
