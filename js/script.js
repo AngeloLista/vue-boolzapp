@@ -143,15 +143,23 @@ const root = new Vue ({
       },
 
       lastMessageDate(index) {
-        let messagesLength = this.contacts[index].messages.length -1;
-        let lastMessageDate = this.contacts[index].messages[messagesLength].date;
-        return lastMessageDate;
+        if (this.contacts[index].messages.length > 0) {
+          let messagesLength = this.contacts[index].messages.length -1;
+          let lastMessageDate = this.contacts[index].messages[messagesLength].date;
+          return lastMessageDate;
+        }
+        return '';
+        
       },
 
       lastText(index) {
-        let messagesLength = this.contacts[index].messages.length -1;
-        let lastText = this.contacts[index].messages[messagesLength].text;
-        return lastText;
+        if (this.contacts[index].messages.length > 0) {
+          let messagesLength = this.contacts[index].messages.length -1;
+          let lastText = this.contacts[index].messages[messagesLength].text;
+          return lastText;
+        }
+        return '';
+        
       }
     },
   })
