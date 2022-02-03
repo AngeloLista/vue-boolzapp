@@ -33,9 +33,9 @@
                             </div>
                             <!-- Menu Options -->
                             <div class="options gray d-flex justify-content-around">
-                                <span id=""><i role="button" class="fas fa-lg fa-circle-notch"></i></span>
-                                <span id=""><i role="button" class="fas fa-lg fa-comment-alt"></i></span>
-                                <span id=""><i role="button" class="fas fa-lg fa-ellipsis-v"></i></span>
+                                <span><i role="button" class="fas fa-lg fa-circle-notch"></i></span>
+                                <span><i role="button" class="fas fa-lg fa-comment-alt"></i></span>
+                                <span><i role="button" class="fas fa-lg fa-ellipsis-v"></i></span>
                             </div>
                         </div>
                     </div>
@@ -68,16 +68,12 @@
                             <!-- Contact -->
                             <div v-for="(contact, index) in contacts" v-if="filterContacts(contact)" role="button" class="col d-flex align-items-center p-3 contact" :class="{ active: isActive(index) }" @click="selectChat(index)">
                                 <img :src="`img/avatar${contact.avatar}.jpg`" class="img-fluid avatar-img" :alt="contact.name">
-                                <!-- <div class="d-flex flex-column justify-content-center">
-                                    <p  class="d-inline-block my-0 h6">{{ contact.name }}</p>
-                                    <p id="" class="d-inline-block">{{ lastText(index) }}</p>
-                                </div> -->
                                 <div class="d-flex flex-column w-100">
                                     <div class="d-flex flex-row align-items-center justify-content-between w-100">
-                                        <p id="contact-name" class="d-inline-block my-0 h6">{{ contact.name }}</p>
-                                        <p id="last-message-date" class="d-inline-block my-0 gray">{{ lastMessageDate(index) }}</p>
+                                        <p class="d-inline-block my-0 h6 contact-name">{{ contact.name }}</p>
+                                        <p class="d-inline-block my-0 gray last-message-date">{{ lastMessageDate(index) }}</p>
                                     </div>
-                                    <p id="last-message" class="d-inline-block my-0 gray">{{ lastText(index) }}</p>
+                                    <p class="d-inline-block my-0 gray last-message">{{ lastText(index) }}</p>
                                 </div>
                             </div>
                         </div>
@@ -88,7 +84,7 @@
 
 
                 <!-- Chat -->
-                <div id="chat" class="col-8 h-100 d-flex flex-column">
+                <div class="col-8 h-100 d-flex flex-column">
                     <!-- Contact chat info -->
                     <div id="Contact-info" class="row media">
                         <div class="col bg-light-gray d-flex justify-content-between align-items-center">
@@ -103,9 +99,9 @@
                                 </div>
                                 <!-- Menu Options -->
                                 <div class="options gray d-flex justify-content-around">
-                                    <span id=""><i role="button" class="fas fa-lg fa-search"></i></span>
-                                    <span id=""><i role="button" class="fas fa-lg fa-paperclip"></i></span>
-                                    <span id=""><i role="button" class="fas fa-lg fa-ellipsis-v"></i></span>
+                                    <span><i role="button" class="fas fa-lg fa-search"></i></span>
+                                    <span><i role="button" class="fas fa-lg fa-paperclip"></i></span>
+                                    <span><i role="button" class="fas fa-lg fa-ellipsis-v"></i></span>
                                 </div>
                             </div>
                         </div>
@@ -119,7 +115,7 @@
                                 <li v-for="(message, index) in contacts[currentIndex].messages" @click="deleteMessage(index)" class="message-container p-3" :class="message.status">
                                     <div class="message p-2 shadow rounded-3" >
                                         <p>{{ message.text }}</p>
-                                        <time datetime="">{{ message.date }}</time>
+                                        <time>{{ message.date }}</time>
                                     </div>
                                 </li>
                             </ul>

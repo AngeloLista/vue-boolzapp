@@ -94,15 +94,15 @@ body {
     background-color: #dfdfdf;
 }
 
-#contact-name {
+.contact-name {
     margin-left: 10px;
 }
 
-#last-message-date {
+.last-message-date {
     font-size: 11px;
 }
 
-#last-message {
+.last-message {
     margin-left: 10px;
     font-size: 13px;
 }
